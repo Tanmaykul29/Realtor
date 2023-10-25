@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+h1 {
+    font-size: 2rem;
+    color: #000;
+    font-weight: 600;
+    margin-right:10px;
+}
+h1 span {
+    position: relative;
+    color: #fff;
+}
+h1 span::before {
+    content: "";
+    right: -8px;
+    top: 50%;
+    position:absolute;
+    height: 30px;
+    width:  2px;
+    background: #fff;
+    transform: translateY(-45%);
+    animation: blink 0.7s infinite;
+}
+h1 span.stop-blinking::before {
+    animation: none;
+}
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
